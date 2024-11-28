@@ -1,0 +1,23 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 4rem); 
+    grid-template-rows: repeat(auto-fit, 4rem);   
+    gap: 1rem; 
+  }
+  
+  .grid-item {
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid white;
+  }
+  
