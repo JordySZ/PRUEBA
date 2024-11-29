@@ -6,8 +6,8 @@ import { ButtonModule } from 'primeng/button';
   selector: 'app-deber2',
   standalone: true,
   imports: [ButtonModule],
-  templateUrl: './deber2.component.html',
-  styleUrl: './deber2.component.scss'
+  templateUrl: './deber3.component.html',
+  styleUrl: './deber3.component.scss'
 })
 export class Deber2Component {
   constructor(private router: Router) {}

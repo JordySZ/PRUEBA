@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Deber3Component } from './deber3.component';
+import { Deber2Component } from './deber3.component';
 
-describe('Deber3Component', () => {
-  let component: Deber3Component;
-  let fixture: ComponentFixture<Deber3Component>;
+describe('Deber2Component', () => {
+  let component: Deber2Component;
+  let fixture: ComponentFixture<Deber2Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Deber3Component]
+      imports: [Deber2Component]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Deber3Component);
+    fixture = TestBed.createComponent(Deber2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

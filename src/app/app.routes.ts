@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { Deber2Component } from './deber2/deber2.component';
-import { Deber3Component } from './deber3/deber3.component';
+import { Deber2Component } from './DEBER 3/deber3.component';
+import { Deber3Component } from './DEBER 4/deber4.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 

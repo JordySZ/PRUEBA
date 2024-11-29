@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   selector: 'app-deber3',
   standalone: true,
   imports: [CardModule, ButtonModule],
-  templateUrl: './deber3.component.html',
-  styleUrl: './deber3.component.scss'
+  templateUrl: './deber4.component.html',
+  styleUrl: './deber4.component.scss'
 })
 export class Deber3Component {
   constructor(private router: Router) {}
