@@ -1,0 +1,24 @@
+<p-button label="regresar" (click)="navigateTo('/home')"></p-button>
+<p></p>
+<div class="card">
+    <p-galleria 
+      [value]="images" 
+      (valueChange)="onValueChange($event)" 
+      [responsiveOptions]="responsiveOptions" 
+      [containerStyle]="{ 'max-width': '1500px' }" 
+      [numVisible]="6">
+      
+      <!-- Plantilla de item de la galería -->
+      <ng-template pTemplate="item" let-item>
+        <div class="gallery-item">
+          <img [src]="item.itemImageSrc" alt="Imagen" class="gallery-image" />
+        </div>
+      </ng-template>
+      
+      <!-- Plantilla de miniaturas -->
+      <ng-template pTemplate="thumbnail" let-item>
+        <img [src]="item.thumbnailImageSrc" alt="Thumbnail" class="gallery-thumbnail" />
+      </ng-template>
+    </p-galleria>
+  </div>
+  

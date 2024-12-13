@@ -1,0 +1,39 @@
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+  
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+  
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+  
+      .product-details {
+        h3 {
+          margin: 5px 0;
+          font-size: 18px;
+        }
+  
+        p {
+          margin: 5px 0;
+          color: #555;
+        }
+  
+        .price {
+          font-weight: bold;
+          color: #007ad9;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  

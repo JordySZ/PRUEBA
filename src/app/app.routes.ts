@@ -9,7 +9,9 @@ import { Tres } from './DEBER 2/3x3/user.component';
 import { Cuatro } from './DEBER 2/4x4/user.component';
 import { Cinco } from './DEBER 2/5x5/user.component';
 import { Seis } from './DEBER 2/6x6/user.component';
-
+import { FORMULARIOComponent } from './formulario/formulario.component';
+import { CARRUCELComponent } from './carrucel/carrucel.component';
+import { GALERIAComponent } from './galeria/galeria.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'home', component: HomeComponent }, 
@@ -19,6 +21,9 @@ export const routes: Routes = [
   { path: '4x4', component: Cuatro },
   { path: '5x5', component: Cinco },
   { path: '6x6', component: Seis },
+  { path: 'formulario', component: FORMULARIOComponent },
+  { path: 'carrucel', component: CARRUCELComponent },
+  { path: 'GALERIA', component: GALERIAComponent },
   { path: '**', redirectTo: '/home' },
 ];
 
