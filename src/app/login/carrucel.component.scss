@@ -1,4 +1,4 @@
-/* Fondo oscuro con efecto de neón */
+
 .login-container {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
   height: 100vh;
@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-/* Tarjeta con bordes iluminados y sombra */
+
 .login-card {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
@@ -20,10 +20,7 @@
   animation: glowing 2s infinite ease-in-out;
 }
 
-/* Animación de resplandor para la tarjeta */
 
-
-/* Estilos de los campos de entrada */
 .login-input {
   background-color: #ffffff;
   border: 1px solid #444;
@@ -36,14 +33,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Resaltar el campo de entrada cuando esté enfocado */
+
 .login-input:focus {
   outline: none;
   border: 1px solid #00ff99;
   box-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
 }
 
-/* Estilo de las etiquetas */
+
 .login-label {
   color: #fff;
   font-size: 1rem;
@@ -51,7 +48,7 @@
   margin-bottom: 5px;
 }
 
-/* Botón de login */
+
 .login-button {
   background: linear-gradient(45deg, #00ff99, #00cc7a);
   color: #000;
@@ -63,18 +60,18 @@
   box-shadow: 0 0 5px rgba(0, 255, 153, 0.7);
 }
 
-/* Efectos de hover en el botón */
+
 .login-button:hover {
   background: linear-gradient(45deg, #00cc7a, #00ff99);
   transform: scale(1.05);
 }
 
-/* Botón activo */
+
 .login-button:active {
   transform: scale(0.98);
 }
 
-/* Mensajes de error */
+
 .p-message {
   font-size: 1rem;
   color: #ff4c4c;

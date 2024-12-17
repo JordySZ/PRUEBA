@@ -18,14 +18,15 @@ import { Router } from '@angular/router';
     MenubarModule,
     AccordionModule,
     ChipModule,
-    PaginatorModule
+    PaginatorModule,
+    MenubarModule
   ],
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.scss']
 })
-export class GALERIAComponent {
+export class juegos {
   constructor(private router: Router) {}
-  // Juegos disponibles
+
   juegos = [
     {
       titulo: 'League of Legends',
@@ -58,14 +59,14 @@ export class GALERIAComponent {
     },
   ];
 
-  // Ítems del Menú
+  
   menubarItems = [
     { label: 'Inicio', icon: 'pi pi-home', command: () => this.router.navigate(['/formulario']) },
     { label: 'Cerrar Sesión', icon: 'pi pi-sign-out', command: () => this.router.navigate(['/home']) }
   ];
 
 
-  // Número de juegos por página
+  
   first: number = 0;
   rows: number = 2;
 

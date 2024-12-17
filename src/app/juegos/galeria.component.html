@@ -4,19 +4,6 @@
   styleClass="custom-menubar">
 </p-menubar>
 
-<div class="contenido">
-  <!-- Panel de Categorías -->
-  <p-accordion styleClass="custom-accordion">
-    <p-accordionTab header="🎯 Estrategia">
-      Juegos basados en tácticas y decisiones estratégicas.
-    </p-accordionTab>
-    <p-accordionTab header="🔫 Shooter">
-      Juegos de disparos en primera o tercera persona.
-    </p-accordionTab>
-    <p-accordionTab header="🌍 MOBA">
-      Arenas de batalla multijugador online.
-    </p-accordionTab>
-  </p-accordion>
 
   <!-- Galería de Juegos -->
   <div class="galeria-container">
@@ -55,4 +42,29 @@
     (onPageChange)="onPageChange($event)"
     styleClass="custom-paginator">
   </p-paginator>
-</div>
+
+  <div class="contenido">
+    <!-- Panel de Categorías -->
+    <p-accordion styleClass="custom-accordion" aria-labelledby="categorias-header">
+      <!-- Estrategia -->
+      <p-accordionTab header="🎯 Estrategia" aria-hidden="false">
+        <p class="descripcion-categoria">
+          Juegos basados en tácticas y decisiones estratégicas.
+        </p>
+      </p-accordionTab>
+  
+      <!-- Shooter -->
+      <p-accordionTab header="🔫 Shooter" aria-hidden="true">
+        <p class="descripcion-categoria">
+          Juegos de disparos en primera o tercera persona.
+        </p>
+      </p-accordionTab>
+  
+      <!-- MOBA -->
+      <p-accordionTab header="🌍 MOBA" aria-hidden="true">
+        <p class="descripcion-categoria">
+          Arenas de batalla multijugador online.
+        </p>
+      </p-accordionTab>
+    </p-accordion>
+  </div>

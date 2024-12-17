@@ -6,14 +6,14 @@ import { HomeComponent } from './home/home.component';
 
 
 import { FORMULARIOComponent } from './formulario/formulario.component';
-import { CARRUCELComponent } from './carrucel/carrucel.component';
-import { GALERIAComponent } from './galeria/galeria.component';
+import { login } from './login/carrucel.component';
+import { juegos } from './juegos/galeria.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }, 
   { path: 'home', component: HomeComponent }, 
   { path: 'formulario', component: FORMULARIOComponent },
-  { path: 'carrucel', component: CARRUCELComponent },
-  { path: 'GALERIA', component: GALERIAComponent },
+  { path: 'login', component: login },
+  { path: 'juegos', component: juegos },
   { path: '**', redirectTo: '/home' },
 ];
 

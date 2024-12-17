@@ -125,3 +125,46 @@ h1 {
   text-align: center;
   margin-bottom: 30px;
 }
+/* Contenedor principal */
+.contenido {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Acordeón */
+.custom-accordion {
+  font-family: Arial, sans-serif;
+}
+
+/* Encabezado del acordeón */
+.custom-accordion .p-accordionTab .p-accordion-header {
+  background-color: #4a90e2; /* Azul vibrante */
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-accordion .p-accordionTab .p-accordion-header:hover {
+  background-color: #357ABD; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Contenido del acordeón */
+.custom-accordion .descripcion-categoria {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Espaciado entre tabs */
+.custom-accordion .p-accordionTab {
+  margin-bottom: 10px;
+}

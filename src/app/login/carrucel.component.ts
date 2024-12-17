@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Para utilizar directivas como ngIf, ngFor, etc.
+import { CommonModule } from '@angular/common';  
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { MessageModule } from 'primeng/message';
-import { FormsModule } from '@angular/forms';  // Para usar [(ngModel)]
+import { FormsModule } from '@angular/forms';  
 import { CardModule } from 'primeng/card';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api'; 
@@ -25,7 +25,7 @@ import { MessageService } from 'primeng/api';
   templateUrl: './carrucel.component.html',
   styleUrls: ['./carrucel.component.scss'],
 })
-export class CARRUCELComponent {
+export class login {
   constructor(private router: Router) {}
   username: string = '';
   password: string = '';
@@ -35,7 +35,7 @@ export class CARRUCELComponent {
     if (this.username === 'admin' && this.password === '12345') {
       this.errorMessage = null;
       
-      this.router.navigate(['/GALERIA']);
+      this.router.navigate(['/juegos']);
     } else {
       this.errorMessage = 'Usuario o contraseña incorrectos.';
     }
