@@ -1,24 +1,58 @@
-<p-button label="regresar" (click)="navigateTo('/home')"></p-button>
-<p></p>
-<div class="card">
-    <p-galleria 
-      [value]="images" 
-      (valueChange)="onValueChange($event)" 
-      [responsiveOptions]="responsiveOptions" 
-      [containerStyle]="{ 'max-width': '1500px' }" 
-      [numVisible]="6">
-      
-      <!-- Plantilla de item de la galería -->
-      <ng-template pTemplate="item" let-item>
-        <div class="gallery-item">
-          <img [src]="item.itemImageSrc" alt="Imagen" class="gallery-image" />
+<!-- Menú Superior -->
+<p-menubar 
+  [model]="menubarItems" 
+  styleClass="custom-menubar">
+</p-menubar>
+
+<div class="contenido">
+  <!-- Panel de Categorías -->
+  <p-accordion styleClass="custom-accordion">
+    <p-accordionTab header="🎯 Estrategia">
+      Juegos basados en tácticas y decisiones estratégicas.
+    </p-accordionTab>
+    <p-accordionTab header="🔫 Shooter">
+      Juegos de disparos en primera o tercera persona.
+    </p-accordionTab>
+    <p-accordionTab header="🌍 MOBA">
+      Arenas de batalla multijugador online.
+    </p-accordionTab>
+  </p-accordion>
+
+  <!-- Galería de Juegos -->
+  <div class="galeria-container">
+    <div 
+      class="juego-card" 
+      *ngFor="let juego of juegos | slice:first:first+rows">
+      <p-card 
+        [header]="juego.titulo" 
+        [subheader]="juego.descripcion" 
+        class="custom-card">
+        <img 
+          [src]="juego.imagen" 
+          alt="{{juego.titulo}}" 
+          class="juego-imagen">
+        <div class="categorias">
+          <p-chip 
+            *ngFor="let categoria of juego.categorias" 
+            [label]="categoria" 
+            styleClass="custom-chip">
+          </p-chip>
         </div>
-      </ng-template>
-      
-      <!-- Plantilla de miniaturas -->
-      <ng-template pTemplate="thumbnail" let-item>
-        <img [src]="item.thumbnailImageSrc" alt="Thumbnail" class="gallery-thumbnail" />
-      </ng-template>
-    </p-galleria>
+        <ng-template pTemplate="footer">
+          <a [href]="juego.link" target="_blank">
+            <p-button label="Ver Más" icon="pi pi-external-link"></p-button>
+          </a>
+        </ng-template>
+      </p-card>
+    </div>
   </div>
-  
+
+  <!-- Paginador -->
+  <p-paginator 
+    [rows]="rows" 
+    [totalRecords]="juegos.length" 
+    [first]="first" 
+    (onPageChange)="onPageChange($event)"
+    styleClass="custom-paginator">
+  </p-paginator>
+</div>

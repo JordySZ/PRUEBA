@@ -1,57 +1,52 @@
-<div class="flex flex-column align-items-center">
-  <h1 class="text-center">Deberes</h1>
-  <h2 class="text-center">Nombre: Jordy Sanchez</h2>
-  <h2 class="text-center">Curso: 3 "B" "DS"</h2>
+<div class="flex flex-column h-screen">
 
-  <div class="card-container">
-    <p-card header="DEBER 1"subheader="Figma">
-      <ng-template pTemplate="footer">
-        <div class="flex gap-3 mt-1">
-          <a href="https://www.figma.com/design/yH3WIwBcuuL6uFKxqrHWY5/Login-Page-UI-(Community)?node-id=0-1&node-type=canvas&t=lMXp7BdwlU153Dn1-0">
-            <p-button label="IR"></p-button>
-          </a>
-        </div>
-      </ng-template>
-    </p-card>
+  <!-- Encabezado -->
+  <p-toolbar class="mb-3">
+    <div class="p-toolbar-group-left">
+      <span class="text-2xl font-bold">RIOT GAME</span>
+    </div>
+    <div class="p-toolbar-group-right">
+      <button pButton label="Iniciar Sesión" class="p-button-text" (click)="navigateTo('/carrucel')"></button>
 
-    <p-card header="DEBER 2" subheader="Matrices">
-      <ng-template pTemplate="footer" >
-        <div class="flex gap-3 mt-1">
-          <p-button label="IR" (click)="navigateTo('/3x3')"></p-button>
-        </div>
-      </ng-template>
-    </p-card>
+    </div>
+  </p-toolbar>
 
-    <p-card header="DEBER 3" subheader="Posiciones">
-      <ng-template pTemplate="footer">
-        <div class="flex gap-3 mt-1">
-          <p-button label="IR" (click)="navigateTo('/DEBER3')"></p-button>
-        </div>
+  <!-- Carrusel de Bienvenida -->
+  <div class="flex justify-content-center mb-4">
+    <p-carousel 
+      [value]="images" 
+      [numVisible]="1" 
+      [numScroll]="1" 
+      [circular]="true" 
+      [autoplayInterval]="5000"
+      styleClass="custom-carousel"
+    >
+      <ng-template pTemplate="item" let-image>
+        <img [src]="image" alt="Image" class="carousel-image">
       </ng-template>
-    </p-card>
+    </p-carousel>
+  </div>
+  
+  
 
-    <p-card header="DEBER 4"subheader="Card">
-      <ng-template pTemplate="footer">
-        <div class="flex gap-3 mt-1">
-          <p-button label="IR" (click)="navigateTo('/DEBER4')"></p-button>
-        </div>
-      </ng-template>
-    </p-card>
+  <!-- Sección de características -->
+  <div class="flex justify-content-center mb-4">
+    <div class="grid">
+      <div class="col-12 md:col-4" *ngFor="let feature of features">
+        <p-card class="h-full">
+          <ng-template pTemplate="header">
+            <i [class]="feature.icon + ' text-4xl text-primary'"></i>
+          </ng-template>
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.description }}</p>
+        </p-card>
+      </div>
+    </div>
+  </div>
 
-    <p-card header="DEBER 5"subheader="Formulario">
-      <ng-template pTemplate="footer">
-        <div class="flex gap-3 mt-1">
-          <p-button label="IR" (click)="navigateTo('/formulario')"></p-button>
-        </div>
-      </ng-template>
-    </p-card>
-
-    <p-card header="DEBER 6"subheader="Carrucel y Galeria">
-      <ng-template pTemplate="footer">
-        <div class="flex gap-3 mt-1">
-          <p-button label="IR" (click)="navigateTo('/carrucel')"></p-button>
-        </div>
-      </ng-template>
-    </p-card>
+  <!-- Pie de página -->
+  <p-divider></p-divider>
+  <div class="text-center py-2">
+    <p>© 2024 Mi Aplicación. Todos los derechos reservados.</p>
   </div>
 </div>

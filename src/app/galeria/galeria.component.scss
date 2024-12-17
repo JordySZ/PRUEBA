@@ -1,40 +1,127 @@
-/* Estilos para el contenedor de la galería */
-.card {
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Menú Superior */
+.custom-menubar {
+  background-color: #6200ea; /* Color morado */
+  padding: 0.5rem 1rem;
+
+  .p-menuitem {
+    color: #fff; /* Texto blanco */
+    margin: 0 10px;
+    
+    &:hover {
+      background-color: #3700b3; /* Morado más oscuro */
+    }
+
+    .pi {
+      color: #fff;
+    }
   }
-  
-  /* Estilos para los elementos de la galería */
-  .p-galleria .p-galleria-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .p-menubar .p-menubar-items {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+/* Acordeón */
+.custom-accordion {
+  .p-accordion-header {
+    background: #03a9f4; /* Azul claro */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
     padding: 10px;
-    box-sizing: border-box;
+    transition: background 0.3s;
+    
+    &:hover {
+      background: #0288d1; /* Azul más oscuro */
+    }
+    
+    .pi {
+      margin-right: 10px;
+    }
   }
-  
-  .p-galleria img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  /* Estilo para las imágenes principales (item) */
-  .gallery-image {
-    width: 300px;  /* Ajusta el tamaño de las imágenes */
-    height: 200px; /* Ajusta el tamaño de las imágenes */
-    object-fit: cover;  /* Mantiene la proporción sin distorsionar */
-  }
-  
-  /* Estilo para las miniaturas */
-  .gallery-thumbnail {
-    width: 80px;  /* Ajusta el tamaño de las miniaturas */
-    height: 50px; /* Ajusta el tamaño de las miniaturas */
-    object-fit: cover;  /* Mantiene la proporción sin distorsionar */
+
+  .p-accordion-content {
+    padding: 1rem;
+    background-color: #e3f2fd; /* Color azul claro */
+    border: 1px solid #90caf9; /* Azul más suave */
     border-radius: 5px;
   }
+}
+
+/* Galería de Juegos */
+.galeria-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Tarjetas de Juegos */
+.juego-card {
+  width: 300px;
+  background-color: #ffffff; /* Blanco */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
   
+  &:hover {
+    transform: translateY(-10px); /* Elevación al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .p-card {
+    border: none;
+    padding: 0;
+  }
+
+  .juego-imagen {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .categorias {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f1f8e9; /* Fondo verde claro */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+/* Botones */
+p-button {
+  background-color: #4caf50; /* Verde */
+  border: none;
+  color: white;
+  
+  &:hover {
+    background-color: #388e3c; /* Verde más oscuro */
+  }
+}
+
+/* Paginación */
+.p-paginator {
+  .p-paginator-pages {
+    background-color: #6200ea; /* Morado */
+  }
+
+  .p-paginator-page {
+    color: white;
+
+    &:hover {
+      background-color: #3700b3; /* Morado oscuro */
+    }
+  }
+}
+
+/* Títulos de la Página */
+h1 {
+  color: #6200ea; /* Morado */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}

@@ -1,74 +1,57 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputMaskModule } from 'primeng/inputmask';
-import { CheckboxModule } from 'primeng/checkbox';
-import { RadioButtonModule } from 'primeng/radiobutton';
+import { Component } from '@angular/core';
+import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { CalendarModule } from 'primeng/calendar';
-import { FileUploadModule } from 'primeng/fileupload';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { SpinnerModule } from 'primeng/spinner';
-import { SliderModule } from 'primeng/slider';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'
 import { Router } from '@angular/router';
 
+// PrimeNG
+
+import { CarouselModule } from 'primeng/carousel';
+import { DividerModule } from 'primeng/divider';
+import { ToolbarModule } from 'primeng/toolbar';
 
 @Component({
-  selector: 'app-formulario',
+  selector: 'app-home',
   standalone: true,
   imports: [
-    InputTextModule,
-    DropdownModule,
-    InputMaskModule,
-    CheckboxModule,
-    RadioButtonModule,
+
     ButtonModule,
-    CalendarModule,
-    FileUploadModule,
-    InputTextareaModule,
-    SpinnerModule,
-    SliderModule,
-    ReactiveFormsModule,
-    CommonModule
-  ],
+    CardModule,
+    CarouselModule,
+    DividerModule,
+    ToolbarModule],
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.scss']
+  styleUrl: './formulario.component.scss'
 })
-export class FORMULARIOComponent implements OnInit {
-  formulario: FormGroup;
+export class FORMULARIOComponent {
+   // Elementos del carrusel
+   images: string[] = [
+    'https://www.riotgames.com/darkroom/1920/10f6ae1e3fc457fa3ce9f564b173f9dc:f5ad12c686df810e35c522d3402b6f59/homepage-hero-general-brand.png',
+    'https://www.riotgames.com/darkroom/800/1bf5f8d967e49f1e855bcdc76abf9d76:f09143b7d7f2121c0b9f0283ac8d6837/e9a3-riot-games-homepage-product-card-hex161616.png',
+    'https://cdn.playersupport.riotgames.com/support-site/images/general/masthead/background.webp',
+  ];
+
+  features = [
+    {
+      icon: 'pi pi-shield',
+      title: 'Al servicio de los más fieles',
+      description: 'Nos centramos en crear la mejor experiencia posible para los jugadores, independientemente del equipo en el que estemos o los sacrificios que sean necesarios. Las líneas empresariales no nos limitan a la hora de crear una experiencia cohesiva de principio a fin.',
+    },
+    {
+      icon: 'pi pi-mobile',
+      title: 'Los egos no tienen cabida',
+      description: 'Hacer lo correcto es más importante que tener razón. Hablamos, debatimos de forma apasionada y ponemos a prueba las ideas siempre pensando en qué es lo mejor para los jugadores. A la hora de trabajar, nos volcamos en cuerpo y alma.',
+    },
+    {
+      icon: 'pi pi-cog',
+      title: 'Apostamos por equipos diversos y con un gran rendimiento',
+      description: 'Queremos tener a los mejores trabajadores en nuestros equipos para crear experiencias auténticas y que dejen huella en nuestros jugadores. Creamos nuestros equipos con esto en mente.',
+    },
+  ];
+  constructor(private router: Router) {}
 
 
-
-  constructor(private router: Router) {
-    // Inicialización del formulario
-    this.formulario = new FormGroup({
-      nombre: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      ciudad: new FormControl(null, Validators.required),
-      telefono: new FormControl('', Validators.required),
-      tipo: new FormControl(null, Validators.required),
-      aceptar: new FormControl(false, Validators.requiredTrue),
-      fechaNacimiento: new FormControl(null, Validators.required),
-      comentarios: new FormControl('', Validators.required),
-      documento: new FormControl(null, Validators.required),
-      cantidad: new FormControl(1, Validators.required),
-      valor: new FormControl(50, Validators.required)
-    });
-  }
-
-  ngOnInit() {}
-
-  onSubmit() {
-    if (this.formulario.valid) {
-      console.log(this.formulario.value);
-    } else {
-      console.log('Formulario no válido');
-    }
-  }
   navigateTo(route: string): void {
     this.router.navigate([route]);
   }
 }
+

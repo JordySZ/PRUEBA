@@ -1,44 +1,44 @@
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño responsivo */
-  gap: 20px; /* Separación entre las tarjetas */
-  padding: 20px; /* Espaciado interno */
+.h-screen {
+  height: 100vh;
+}
+
+.w-full {
   width: 100%;
-  justify-items: center; /* Centra las tarjetas en cada columna */
 }
 
-p-card {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un diseño moderno */
-  border-radius: 8px; /* Bordes redondeados */
-  overflow: hidden; /* Evita que el contenido sobresalga */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efecto al pasar el cursor */
+.h-15rem {
+  height: 15rem;
 }
 
-p-card:hover {
-  transform: translateY(-5px); /* Desplaza la tarjeta ligeramente hacia arriba */
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Sombra más grande al pasar el cursor */
+.text-primary {
+  color: #007ad9;
 }
 
-.flex {
+.grid {
   display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mt-1 {
-  margin-top: 1rem;
-}
-
-.gap-3 {
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.col-12 {
+  flex: 1 1 100%;
+}
+
+.md\:col-4 {
+  flex: 1 1 30%;
+}
+.carousel-image {
+  max-width: 500%;     /* Limita el ancho máximo al 90% del contenedor */
+  height: 300px;      /* Tamaño fijo para todas las imágenes */
+  object-fit: cover;  /* Ajusta las imágenes sin deformarlas */
+  border-radius: 8px; /* Bordes redondeados */
+  display: block;     /* Asegura que se comporten como elementos de bloque */
+  margin: 0 auto;     /* Centra las imágenes horizontalmente */
+}
+
+.custom-carousel .p-carousel-item {
+  display: flex;       /* Configura el contenedor del carrusel como flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  padding: 1rem;       /* Agrega un pequeño espaciado */
 }
